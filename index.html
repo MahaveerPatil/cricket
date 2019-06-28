@@ -1,0 +1,639 @@
+<html>
+   <head>
+       <title>criket page</title>
+   <head>
+        
+               <!-- set the encoding of your site -->
+               <meta charset="UTF-8">
+               <!-- set the viewport width and initial-scale on mobile devices -->
+               <meta name="viewport" content="width=device-width, initial-scale=1"/>
+               <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+                <title>Cricket Web</title>
+               <script type="text/javascript">
+                   var pathInfo = {
+                       
+                       css: 'css/',
+                       js: 'js/',
+                       swf: 'swf/',
+                   }
+               </script> 
+               <style>
+.nav {
+  background-color: #0D0B39; 
+  list-style-type: none;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+
+.nav1 {
+  background-color:rgb(253, 250, 250); 
+  list-style-type: none;
+  text-align: center;
+  margin: 10;
+  margin-left: 0;
+  margin-right: 50;
+  
+  
+}
+.nav2 {
+  background-color: #0D0B39; 
+  list-style-type: none;
+  text-align: center;
+  margin: 0;
+  padding: 3;
+  height: 375;
+  border:10;
+
+}
+.nav2 img{
+margin-left: -30px;
+margin-top:15;
+margin-right: -35;
+}
+.nav li1 {
+  display: inline-block;
+  font-size: 30px;
+  padding: 40px;
+  color:white;
+  
+}
+
+.nav li {
+  display: inline-block;
+  font-size: 20px;
+  padding: 30px;
+  color:white;
+}
+
+#inner{
+      margin-top: 10px;
+      margin-left: 10px;
+      margin-right: 22;
+      float: left;
+			width: 25%;
+      border:10px;
+			height: 610;
+      background:rgb(231, 232, 238);
+      border: 2px ;
+      border-radius: 10px;  
+    } 
+    .button {
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 13px;
+  padding: 7px;
+  width: 34px;
+  transition: all 0.5s;
+  cursor: pointer;
+  
+}
+.button1 {
+  border-radius: 4px;
+  background-color: #9013FE;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 13px;
+  padding: 7px;
+  width: 70px;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+.button2 {
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 13px;
+  padding: 7px;
+  width: 34px;
+  transition: all 0.5s;
+  cursor: pointer;
+  float: left;
+  margin-left: 4;
+  margin-top: 4;
+}
+.button3 {
+  border-radius: 4px;
+  background-color: black;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 13px;
+  padding: 7px;
+  width: 39px;
+  transition: all 0.5s;
+  cursor: pointer;
+  float: left;
+  margin-left: 4;
+  margin-top: 4;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+#inner1 {
+  text-align: center;
+  color:#0D0B39;
+  margin-top: 9;
+  font-family: HelveticaRounded-BoldCond;
+
+}
+#layer1 {
+  background-color:#F0F6FF;
+  margin-left: 8;
+  margin-right: 8;
+  height:30;
+}
+#layer2 {
+  background-color:lightblue;
+  margin-left: 8;
+  margin-right: 8;
+  margin-top:-20;
+  height:30;
+}
+#text{
+  float: right;
+  color: #FFFFFF;
+  margin-left: 7;
+}
+.square {
+  height: 232px;
+  width: 336px;
+  background-color: rgb(248, 246, 246);
+  margin-left: 350;
+  margin-top: 16;
+}
+
+.square1 {
+  height: 232px;
+  width: 336px;
+  background-color: rgb(248, 246, 246);
+  margin-left: 692;
+  margin-top: -232;
+}
+.square2 {
+  height: 232px;
+  width: 298px;
+  background-color: rgb(248, 246, 246);
+  margin-left: 1034;
+  margin-top: -232;
+
+  
+}
+
+
+ play button on image download
+
+body {
+  background:white;
+}
+
+.video-play-button {
+  position: absolute;
+  z-index: 10;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  box-sizing: content-box;
+  display: block;
+  width: 32px;
+  height: 44px;
+  /* background: #fa183d; */
+  border-radius: 50%;
+  padding: 18px 20px 18px 28px;
+}
+
+.video-play-button:before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  display: block;
+  width: 80px;
+  height: 80px;
+  background: #1fba1f;
+  border-radius: 50%;
+  animation: pulse-border 1500ms ease-out infinite;
+}
+
+.video-play-button:after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  display: block;
+  width: 80px;
+  height: 80px;
+  background: #08fa00;
+  border-radius: 50%;
+  transition: all 200ms;
+}
+
+.video-play-button:hover:after {
+  background-color: darken(#2afd00, 10%);
+}
+
+.video-play-button img {
+  position: relative;
+  z-index: 3;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+}
+
+.video-play-button span {
+  display: block;
+  position: relative;
+  z-index: 3;
+  width: 0;
+  height: 0;
+  border-left: 32px solid #fff;
+	border-top: 22px solid transparent;
+	border-bottom: 22px solid transparent;
+}
+
+@keyframes pulse-border {
+  0% {
+    transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.5);
+    opacity: 0;
+  }
+}
+
+
+
+.video-overlay {
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0,0,0,0.80);
+  opacity: 0;
+  transition: all ease 500ms;
+}
+
+.video-overlay.open {
+  position: fixed;
+  z-index: 1000;
+  opacity: 1;
+}
+
+.video-overlay-close {
+  position: absolute;
+  z-index: 1000;
+  top: 15px;
+  right: 20px;
+  font-size: 36px;
+  line-height: 1;
+  font-weight: 400;
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 200ms;
+}
+
+.video-overlay-close:hover {
+  color: #fa183d;
+}
+
+.video-overlay iframe {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  /* width: 90%; */
+  /* height: auto; */
+  box-shadow: 0 0 15px rgba(0,0,0,0.75);
+}
+
+
+.button5 {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 15;
+  padding: 10px;
+  width: 140px;
+  height: 40px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+  float: left;
+  margin-left:10;
+  margin-top: 20;
+  font-family: Helvetica-Bold;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+#layernext{
+background-color:#F0F6FF;
+  margin-left: 8;
+  margin-right: 8;
+  height:60;
+}
+
+
+.button9 {
+  background-color: #008CBA;
+  height: 40;
+  width: 140;
+  margin-right: -240;
+  margin-left: -80;
+  margin-top: 60;
+  }
+
+.button15{
+  background-color: rgb(255, 255, 255);
+  color: black;
+  height: 40;
+  width: 140;
+  margin-left: 190;
+  margin-right: -30;
+
+}
+
+
+.fa {
+  padding: 10px;
+  font-size: 20px;
+  width: 10px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  margin-top: -60;
+  margin-bottom: -50;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+  width:15;
+}
+#india .play{
+  display: block;
+  position: absolute;
+  left: 24%;
+  background-color:green;
+  margin-top: -20px;
+  height: 40px;
+  border: none;
+}
+
+
+
+
+
+
+
+   
+</style>      
+</head>
+
+   <body>
+
+    <div class="header-top">
+    <div class="header-tline">
+        <div class="header-tline-box">
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+          <a  class="btn-team"><b>International Teams >></b></a>
+               <img src="http://www.cricketweb.net/wp-content/uploads/2014/12/australia_flag-22x12.jpg" height="12" width="22" alt="Australia Flag">&nbsp;&nbsp;&nbsp;
+               <img src="http://www.cricketweb.net/wp-content/uploads/2014/12/banglades_flag-21x12.jpg" height="12" width="21" alt="Banglades Flag">&nbsp;&nbsp;&nbsp;
+               <img src="http://www.cricketweb.net/wp-content/uploads/2014/12/bermuda_flag-22x12.jpg" height="12" width="22" alt="Bermuda Flag">&nbsp;&nbsp;&nbsp;
+               <img src="http://www.cricketweb.net/wp-content/uploads/2014/12/canada_flag-22x12.jpg" height="12" width="22" alt="Canada Flag">&nbsp;&nbsp;&nbsp;
+               <img src="http://www.cricketweb.net/wp-content/uploads/2014/12/england_flag-22x12.jpg" height="12" width="22" alt="England Flag">&nbsp;&nbsp;&nbsp;
+               <img src="http://www.cricketweb.net/wp-content/uploads/2014/12/india_flag-22x12.jpg" height="12" width="22" alt="India Flag">&nbsp;&nbsp;&nbsp;
+               <img src="http://www.cricketweb.net/wp-content/uploads/2014/12/ireland_flag-22x12.jpg" height="12" width="22" alt="Ireland Flag">&nbsp;&nbsp;&nbsp;
+               <img src="http://www.cricketweb.net/wp-content/uploads/2014/12/kenya_flag-22x12.jpg" height="12" width="22" alt="Kenya Flag">&nbsp;&nbsp;&nbsp;
+               <img src="http://www.cricketweb.net/wp-content/uploads/2014/12/netherlands_flag-22x12.jpg" height="12" width="22" alt="Netherlands Flag">&nbsp;&nbsp;&nbsp;
+               <img src="http://www.cricketweb.net/wp-content/uploads/2014/12/nz_flag-22x12.jpg" height="12" width="22" alt="Nz Flag">&nbsp;&nbsp;&nbsp;
+               <img src="http://www.cricketweb.net/wp-content/uploads/2014/12/pakistan_flag-22x12.jpg" height="12" width="22" alt="Pakistan Flag">&nbsp;&nbsp;&nbsp;
+               <img src="http://www.cricketweb.net/wp-content/uploads/2014/12/scotland_flag-22x12.jpg" height="12" width="22" alt="Scotland Flag">&nbsp;&nbsp;&nbsp;
+               <img src="http://www.cricketweb.net/wp-content/uploads/2014/12/south_africa_flag-22x12.jpg" height="12" width="22" alt="South Africa Flag">&nbsp;&nbsp;&nbsp;
+               <img src="http://www.cricketweb.net/wp-content/uploads/2014/12/srilanka_flag-22x12.jpg" height="12" width="22" alt="Srilanka Flag">&nbsp;&nbsp;&nbsp;
+               <img src="http://www.cricketweb.net/wp-content/uploads/2014/12/west_indies_flag-22x12.jpg" height="12" width="22" alt="West Indies Flag">&nbsp;&nbsp;&nbsp;
+               <img src="http://www.cricketweb.net/wp-content/uploads/2014/12/zimbabwe_flag-22x12.jpg" height="12" width="22" alt="Zimbabwe Flag">&nbsp;&nbsp;&nbsp;
+         
+         </div>
+      </div>
+    </div>
+
+  <ul class="nav">
+  <li><a "#home">Home</a></li>
+  <li><a "#about">Results</a></li>
+  <li><a "#clients">Fixtures</a></li>  
+  <li><a "#contact">Hockey</a></li>
+  <li><a "#contact">videos</a></li>
+  <li><a "#contact">Statistics</a></li>
+  <li><a "#contact">Community</a></li>
+</ul>
+
+<ul class ="nav1">
+  <li1><a>ICC Champions trophy 2019 <button class="button"><span>live</span></button></a></li1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <li1><a>west indies tour of Afghanistan 2019</a></li1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <li1><a>zimbawa tour of Bangladesh 2019</a></li1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+  <li1><a>The Ashesh 2018-19</a></li1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <li1><a>Pakistan tour of Srilanka 2019 <button class="button1"><span>upcoming</span></button></a></li1>
+</ul>
+
+<ul class ="nav2">  
+     <div id="text" >
+      <h4 style="margin:30 150 0 -0">India vs Engalnd, 5th ODI</h4>
+      <h2 style="margin:18 65 20 -50; font-size:32px;">IND 318/10 (50)</h2>
+      <h5 style="margin: 0 0 0 -310; font-size:20px;">vs</h5>
+      <h2 style="margin:6 150 35 50; font-size:32px; color:aqua;">Eng 184/4* (28.3)</h2>
+      <h4 style="margin:20 40 25 -60; font-size:18px; ">Kevin Peterson playing at 101*</h4>
+      <div style="margin:10 350 0 0 ">
+      <button class="button button9">MATCH CENTER</button>
+      </div>
+     <div style="margin:-40 120 0 0 " >
+      <button class="button button15">INVITE FRIENDS</button>
+      </div>
+      <a href="#" class="fa fa-facebook" style="margin: -40 10 10 340"></a>
+      <a href="#" class="fa fa-twitter"></a>
+      </div>
+     </div>
+
+   
+  <img src="download.jpg" class="img" alt="criket image" height="355" width="575.5" >
+  
+  <img src="next.png" >
+  <img src="previous.png">
+  
+
+
+  <a id="play-video" class="video-play-button" href="#">
+  <span></span>
+</a>
+<div id="video-overlay" class="video-overlay">
+  <a class="video-overlay-close">&times;</a>
+</div>
+
+
+  <div id="inner">
+  <br/>
+    <button class="button2"><span>live</span></button> 
+    <div id="india">
+    <div id="inner1"><b>2nd ODI&nbsp;&nbsp;&nbsp;&nbsp;ICC Champions Trophy 2019</b>
+    </div>
+    <br/>
+    <div id="layer1" >
+      <img style="float: left; margin: 5px -500px 15px 15px;" src="sahara.png" width="20"/><h3>Ind&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;318-8&nbsp;&nbsp;(50)</h3>
+</div>
+<!--<input type="button" class="play" value="play" >-->
+<img src="play.png" class="play"/>
+<div id="layer2" >
+      <img style="float: left; margin: 10px -500px 5px 15px;" src="England.png" width="20" height="15"/><h3>Eng&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;318-9&nbsp;&nbsp;(50)</h3>
+</div>
+</div>
+
+<br/>
+
+<button class="button2"><span>live</span></button> 
+    <div id="inner1"><b>23rd T20&nbsp;&nbsp;&nbsp;&nbsp;Vivo IPL 2019</b></div>
+    <br/>
+    <div id="india">
+    <div id="layer1" >
+      <img style="float: left; margin: 5px -500px 15px 15px;" src="rcb.png" width="20"/><h3>RCB&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;188-8&nbsp;&nbsp;(50)</h3>
+</div>
+<img src="play.png" class="play"/>
+<div id="layer2" >
+      <img style="float: left; margin: 10px -500px 5px 15px;" src="dd.png" width="20" height="15"/><h3>DD &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;318-7&nbsp;&nbsp;(50)</h3>
+</div><br/>
+
+<br/>
+</div>
+<button class="button2"><span>live</span></button> 
+    <div id="inner1"><b>3rd Test&nbsp;&nbsp;&nbsp;&nbsp;Pakistan Tour of Newzelend</b></div>
+    <br/>
+    <div id="india">
+    <div id="layer1" >
+      <img style="float: left; margin: 5px -500px 15px 15px;" src="pak.png" width="20"/><h3>Pakistan&nbsp;318-9&nbsp;&nbsp;(50)</h3>
+</div>
+<img src="play.png" class="play"/>
+<div id="layer2" >
+      <img style="float: left; margin: 10px -500px 5px 15px;" src="nzl.png" width="20" height="15"/><h3>NZL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;318-9&nbsp;&nbsp;(50)</h3>
+</div><br/>
+ 
+<br/>
+</div>
+
+<button class="button3"><span>Next</span></button> 
+    <div id="inner1"><b>2nd ODI&nbsp;&nbsp;&nbsp;&nbsp;ICC Champions Trophy 2019</b></div>
+    <br/>
+    <div id="layernext">
+        <img style=" margin: 8px 300px 5px 15px;" src="sahara.png"  width="20"/><h4 style=" float: left; margin: -25 58 ;">INDIA</h4> <br/><img style=" margin: -26 0 -15 -40 ;" src="England.png" width="20" height="25"/><h4 style="margin:-25 0 -180 90">ENGLAND</h4>
+        <h4 style=" margin: 193 0 0 -180 ">Today, 2:30 PM</h4>
+        <img style="margin: -45 0 0 230 ;" src="alarm.png" width="50" height="50">
+    </div>
+</div>
+
+
+
+<div class="square"><br/><b style=" margin : 17 140 20 0 ; color:#868686" >Pakistan vs newzelend</b>
+<br/>
+<h3  font-family="HelveticaRounded-BoldCond" style=" margin : 17 90 20 0 ;">Pakistan won by 108 runs</h3>
+<br/>
+ <img style="float: left; margin: -2px -500px 15px 15px;" src="pak.png" width="20"/>Pak &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;370-10(50)
+ <br/><br/>
+ <img style="float: left; margin: -0px -500px 5px 15px;" src="nzl.png" width="20" height="15"/>NZL &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 188-10(34.5)
+ <br/>
+ <button class="button5" style="vertical-align:middle"><span>Match videos </span></button>
+</div>
+
+
+<div class="square1"><br/><b style=" margin : 17 140 20 0 ; color:#868686 ">Pakistan vs newzelend</b>
+<br/>
+<h3 style=" margin : 17 92 20 0;">Pakistan won by 108 runs</h3>
+<br/>
+<img style="float: left; margin: -60px -500px 15px 15px;" src="pak.png" width="20"/>Pak &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 370-10(50)
+ <br/><br/>
+ <img style="float: left; margin: -18px -500px 5px 15px;" src="nzl.png" width="20" height="15"/>NZL &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;188-10(34.5)
+ <br/>
+ <button class="button5" style="vertical-align:middle"><span>Match videos </span></button>
+</div>
+
+
+<div class="square2"><br/><b style=" margin : 17 110 20 0 ; color:#868686">Pakistan vs newzelend</b>
+<br/>
+<h3 style=" margin : 17 55 20 0 ;">Pakistan won by 108 runs</h3>
+<br/>
+<img style="float: left; margin: -56px -500px 15px 15px;" src="pak.png" width="20"/>Pak &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;370-10(50)
+ <br/><br/>
+ <img style="float: left; margin: -17px -500px 5px 15px;" src="nzl.png" width="20" height="15"/>NZL &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 188-10(34.5)
+ <br/>
+ <button class="button5" style="vertical-align:middle"><span>Match videos </span></button></div>
+</ul>
+   </body>  
+</html>
